@@ -104,6 +104,8 @@ $(document).ready(function (){
         descripcion:$("textarea#descripcion").val(),
         numero_exterior:$("input#numero_exterior").val(),
         codigo_postal:$("input#codigo_postal").val(),
+        lat:$("input#latitude").val(),
+        lng:$("input#longitude").val(),
         entre_calles:$("input#entre_calles").val(),
         personas_heridas_fallecidas:$("input#personas_heridas_fallecidas").val(),
         personas_afectadas:$("input#personas_afectadas").val(),
