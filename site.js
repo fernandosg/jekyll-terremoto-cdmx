@@ -96,7 +96,7 @@ $(document).ready(function (){
     console.log($("select#ciudad").val()+" "+$("select#municipio").val());
     $.ajax({
       method:"POST",
-      url:"http://localhost:3000/reporte_danos",
+      url:"https://terremoto-zonariesgo-cdmx.herokuapp.com/reporte_danos",
       data:{reporte_dano:{
         tipo_dano_id:$("select#tipo_dano").val(),
         calle:$("input#calle").val(),
@@ -122,7 +122,7 @@ $(document).ready(function (){
    function obtenerInformacionFormulario(){
      $.ajax({
        method:"GET",
-       url:"http://localhost:3000/datos/obtener-informacion-formulario",
+       url:"https://terremoto-zonariesgo-cdmx.herokuapp.com/datos/obtener-informacion-formulario",
        datatype:"JSON"
      }).done(function(jsonInfo){
        var listaCiudades="",listaMunicipios="",listaTipoDano="";
