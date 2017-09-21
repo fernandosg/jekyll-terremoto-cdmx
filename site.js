@@ -100,6 +100,8 @@ $(document).ready(function (){
       data:{reporte_dano:{
         tipo_dano_id:$("select#tipo_dano").val(),
         calle:$("input#calle").val(),
+        nombre_lugar:$("input#nombre_lugar").val(),
+        descripcion:$("textarea#descripcion").val(),
         numero_exterior:$("input#numero_exterior").val(),
         codigo_postal:$("input#codigo_postal").val(),
         entre_calles:$("input#entre_calles").val(),
@@ -108,8 +110,8 @@ $(document).ready(function (){
         apoyo_necesario:$("textarea#apoyo_necesario").val(),
         informacion_extra:$("textarea#informacion_extra").val(),
         informacion_contacto:$("textarea#informacion_contacto").val(),
-        ciudad_id:$("select#ciudad").val(),
-        municipio_id:$("select#municipio").val()
+        entidad_id:$("select#entidad").val(),
+        delegacion_id:$("select#delegacion").val()
       }}
     }).done(function(){
       alert("Envio de reporte enviado con exito");
@@ -124,19 +126,19 @@ $(document).ready(function (){
        url:"https://terremoto-zonariesgo-cdmx.herokuapp.com/datos/obtener-informacion-formulario",
        datatype:"JSON"
      }).done(function(jsonInfo){
-       var listaCiudades="",listaMunicipios="",listaTipoDano="";
-       for(var i=0,length=jsonInfo.ciudades.length;i<length;i++){
-         listaCiudades+="<option value="+jsonInfo.ciudades[i].id+">"+jsonInfo.ciudades[i].nombre+"</option>";
+       var listaDelegaciones="",listaEntidades="",listaTipoDano="";
+       for(var i=0,length=jsonInfo.delegaciones.length;i<length;i++){
+         listaDelegaciones+="<option value="+jsonInfo.delegaciones[i].id+">"+jsonInfo.delegaciones[i].nombre+"</option>";
        }
-       for(var i=0,length=jsonInfo.municipios.length;i<length;i++){
-         listaMunicipios+="<option value="+jsonInfo.municipios[i].id+">"+jsonInfo.municipios[i].nombre+"</option>";
+       for(var i=0,length=jsonInfo.entidades.length;i<length;i++){
+         listaEntidades+="<option value="+jsonInfo.entidades[i].id+">"+jsonInfo.entidades[i].nombre+"</option>";
        }
 
        for(var i=0,length=jsonInfo.tipo_dano.length;i<length;i++){
          listaTipoDano+="<option value="+jsonInfo.tipo_dano[i].id+">"+jsonInfo.tipo_dano[i].nombre+"</option>";
        }
-       $("select#ciudad")[0].innerHTML=listaCiudades;
-       $("select#municipio")[0].innerHTML=listaMunicipios;
+       $("select#delegacion")[0].innerHTML=listaDelegaciones;
+       $("select#entidad")[0].innerHTML=listaEntidades;
        $("select#tipo_dano")[0].innerHTML=listaTipoDano;
      }).fail(function(){
        alert("Problema al cargar las ciudades y municipios");

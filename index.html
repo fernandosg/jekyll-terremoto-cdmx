@@ -61,12 +61,18 @@
           <label for="tipo_dano">Tipo de daños</label>
           <select name="tipo_dano" id="tipo_dano">
           </select>
+          <label for="nombre_lugar">Nombre del lugar</label>
+          <input type="text" name="nombre_lugar" id="nombre_lugar" placeholder="Escribe el nombre del lugar" class="text ui-widget-content ui-corner-all">
+          <label for="descripcion">Descripción</label>
+          <textarea name="descripcion" id="descripcion" placeholder="Escribe una breve descripción del lugar, sus condiciones, etc." class="text ui-widget-content ui-corner-all"></textarea>
           <label for="calle">Nombre de la calle</label>
           <input type="text" name="calle" id="calle" placeholder="Escribe el nombre de la calle" class="text ui-widget-content ui-corner-all">
           <label for="numero_exterior">Número exterior</label>
           <input type="number" name="numerio_exterior" id="numerio_exterior" placeholder="Escribe, en digitos, el número exterior de la calle" class="text ui-widget-content ui-corner-all">
           <label for="codigo_postal">Código postal</label>
-          <input type="number" name="codigo_posta" id="codigo_posta" placeholder="Escribe el código postal" class="text ui-widget-content ui-corner-all">
+          <input type="number" name="codigo_postal" id="codigo_postal" placeholder="Escribe el código postal" class="text ui-widget-content ui-corner-all">
+          <label for="colonia">Colonia</label>
+          <input type="text" name="colonia" id="colonia" placeholder="Escribe la colonia del lugar" class="text ui-widget-content ui-corner-all">
           <label for="entre_calles">Entre calles</label>
           <input type="text" name="entre_calles" id="entre_calles" placeholder="Escribe las calles paralelas a las calles de la zona de riesgo" class="text ui-widget-content ui-corner-all">
           <label for="personas_heridas_fallecidas">Número de personas heridas fallecidas</label>
@@ -79,11 +85,11 @@
           <textarea name="informacion_extra" id="informacion_extra" placeholder="Escribe información extra que creas conveniente añadir" class="text ui-widget-content ui-corner-all"></textarea>
           <label for="informacion_contacto">Información de contacto</label>
           <textarea name="informacion_contacto" id="informacion_contacto" placeholder="Escribe algun número telefónico o medios en los cuales pudieran contactarte" class="text ui-widget-content ui-corner-all"></textarea>
-          <label for="ciudad">Ciudad/Localidad</label>
-          <select id="ciudad" name="ciudad">
+          <label for="entidad">Entidad</label>
+          <select id="entidad" name="entidad">
           </select>
-          <label for="municipio">Municipio</label>
-          <select id="municipio" name="municipio">
+          <label for="delegacion">Delegación</label>
+          <select id="delegacion" name="delegacion">
           </select>
           <!-- Allow form submission with keyboard without duplicating the dialog button -->
           <input type="submit" id="enviar_registro_zona" tabindex="-1" style="position:absolute; top:-1000px">
