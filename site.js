@@ -115,7 +115,6 @@ $(document).ready(function (){
       alert("Envio de reporte enviado con exito");
       dialog.dialog( "close" );
     }).fail(function(){
-      console.log("Fallo en el envio de datos");
     })
   }
 
